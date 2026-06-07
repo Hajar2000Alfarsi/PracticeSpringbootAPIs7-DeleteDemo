@@ -16,4 +16,16 @@ public class ProductService {
     }
 
 
+    public String deleteProductById(int productId){
+        if (!productMap.containsKey(productId)) {
+            return "Product not found";
+        }
+
+        Product productToRemove = productMap.remove(productId);
+
+        return "Product Deleted Successfully\n" +
+                "Product ID: " + productToRemove.getProductId() +
+                "\nProduct Name: " + productToRemove.getProductName() +
+                "\nProduct Price: " + productToRemove.getPrice();
+    }
 }
