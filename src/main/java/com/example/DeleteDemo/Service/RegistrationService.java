@@ -2,12 +2,14 @@ package com.example.DeleteDemo.Service;
 
 import com.example.DeleteDemo.Entites.EventRegistration;
 import jakarta.annotation.PostConstruct;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class RegistrationService {
     private Map<Integer, EventRegistration> registrations = new HashMap<>();
 
