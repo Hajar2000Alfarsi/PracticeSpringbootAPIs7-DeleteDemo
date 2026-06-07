@@ -3,6 +3,7 @@ package com.example.DeleteDemo.Service;
 import com.example.DeleteDemo.Entites.EventRegistration;
 import jakarta.annotation.PostConstruct;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,9 @@ public class RegistrationService {
     }
 
     public String deleteMultipleByIds(List<Integer> ids){
+        List<Integer> deletedIds = new ArrayList<>();
+        List<Integer> notFoundIds = new ArrayList<>();
+
 
     }
 }
