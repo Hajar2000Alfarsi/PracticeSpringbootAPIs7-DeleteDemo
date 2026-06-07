@@ -22,6 +22,18 @@ public class RegistrationService {
         List<Integer> deletedIds = new ArrayList<>();
         List<Integer> notFoundIds = new ArrayList<>();
 
-
+        for (Integer id : ids) {
+            if (registrations.containsKey(id)){
+                registrations.remove(id);
+                deletedIds.add(id);
+            } else {
+                notFoundIds.add(id);
+            }
+        }
+        return "Bulk Deletion Completed\n" +
+                "Total Requested: " + ids.size() +
+                "\nDeleted Successfully: " + deletedIds.size() +
+                "\nDeleted ID's: " + deletedIds +
+                "\nNot found ID's : " + notFoundIds;
     }
 }
